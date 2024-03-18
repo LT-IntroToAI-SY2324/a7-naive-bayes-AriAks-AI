@@ -4,7 +4,7 @@ from typing import Tuple, List, Dict
 
 class BayesClassifier:
     """A simple BayesClassifier implementation
-
+ 
     Attributes:
         pos_freqs - dictionary of frequencies of positive words
         neg_freqs - dictionary of frequencies of negative words
