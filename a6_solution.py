@@ -14,7 +14,6 @@ class BayesClassifier:
         neg_file_prefix - prefix of negative reviews
         pos_file_prefix - prefix of positive reviews
     """
-
     def __init__(self):
         """Constructor initializes and trains the Naive Bayes Sentiment Classifier. If a
         cache of a trained classifier is stored in the current folder it is loaded,
@@ -25,7 +24,7 @@ class BayesClassifier:
         self.neg_freqs: Dict[str, int] = {}
         self.pos_filename: str = "pos.dat"
         self.neg_filename: str = "neg.dat"
-        self.training_data_directory: str = "movie_reviews/"
+        self.training_data_directory: str = "movie_reviews/movie_reviews"
         self.neg_file_prefix: str = "movies-1"
         self.pos_file_prefix: str = "movies-5"
 
@@ -71,7 +70,7 @@ class BayesClassifier:
         #     <the rest of your code for updating frequencies here>
         for index, filename in enumerate(files, 1): # type: ignore
             #print(f"Training on file {index} of {len(files)}")
-            
+
             text = self.load_file(os.path.join(self.training_data_directory, filename))        
 
         # we want to fill pos_freqs and neg_freqs with the correct counts of words from
